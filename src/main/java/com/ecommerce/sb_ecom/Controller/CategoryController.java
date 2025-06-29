@@ -31,7 +31,7 @@ public class CategoryController {
     @PostMapping("/public/categories")
     public ResponseEntity <String> createCategory(@RequestBody Category category) {
         categoryService.createCategory(category);
-        return new ResponseEntity<>("Category ceated successfully" ,HttpStatus.CREATED );
+        return new ResponseEntity<>("Category created successfully" ,HttpStatus.CREATED );
     }
 
     @DeleteMapping("/admin/categories/{categoryId}")

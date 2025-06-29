@@ -2,17 +2,22 @@ package com.ecommerce.sb_ecom.Model;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-
+@Entity
 public class Category {
-    private long categoryId ;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long categoryId ;
     private String categoryName ;
 
     public Category() {
-    // default constructor
+
     }
 
-    public Category(long categoryId, String categoryName) {
+    public Category(Long categoryId, String categoryName) {
         this.categoryId = categoryId;
         this.categoryName = categoryName;
     }
